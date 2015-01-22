@@ -12,6 +12,6 @@ module.exports = {
 
   included: function(app) {
     this._super.included(app);
-    this.app.import(app.bowerDirectory, '/mailcheck/src/mailcheck.js');
+    this.app.import(app.bowerDirectory + '/mailcheck/src/mailcheck.js');
   }
 };
