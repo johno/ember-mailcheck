@@ -34,7 +34,12 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "email",
+    "input",
+    "email validation",
+    "ux",
+    "mailcheck"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
