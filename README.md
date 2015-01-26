@@ -18,7 +18,7 @@ ember install:addon ember-mailcheck
 In order to create an email input, you can call the `mail-check` component like so:
 
 ```hbs
-{{mail-check inputClass='form-input'}}
+{{mail-check}}
 ```
 
 Upon blur, the email will be validated with mailcheck. If there is no email domain the

@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   value: '',
   placeholder: '',
   suggestion: '',
+  inputClass: 'mailcheck-input',
   classNames: ['mailcheck'],
 
   actions: {
