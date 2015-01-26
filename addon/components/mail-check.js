@@ -12,7 +12,7 @@ export default Ember.Component.extend({
   actions: {
     mailcheck: function() {
       var _this = this;
-      console.log(this.value + '    ello');
+
       Mailcheck.run({
         email: _this.value,
         suggested: function(suggestion) {
