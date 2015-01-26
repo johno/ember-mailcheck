@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import Mailcheck from 'mailcheck';
 
 export default Ember.Component.extend({
   type: 'email',
@@ -19,7 +20,14 @@ export default Ember.Component.extend({
           _this.set('suggestion', suggestion.full);
         },
         empty: function() {
-          var message = 'You seem to missing an email domain, like @google.com or @hotmail.com';
+          var email = _this.value;
+
+          if (isEmail(email)) {
+            return;
+          }
+
+          var message = 'You seem to be missing an email domain, like @google.com or @hotmail.com';
+
           _this.set('hint', message);
           _this.set('suggestion', null);
         }
@@ -31,3 +39,8 @@ export default Ember.Component.extend({
     }
   }
 });
+
+function isEmail(email) {
+  return Ember.isPresent(email) &&
+         /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/.test(email);
+}
