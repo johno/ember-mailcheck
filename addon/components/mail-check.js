@@ -26,7 +26,7 @@ export default Ember.Component.extend({
             return;
           }
 
-          var message = 'You seem to be missing an email domain, like @google.com or @hotmail.com';
+          var message = 'You seem to be missing an email domain, like @gmail.com or @hotmail.com';
 
           _this.set('hint', message);
           _this.set('suggestion', null);

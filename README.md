@@ -13,6 +13,27 @@ Integrates with [ember-cli](http://ember-cli.com).
 ember install:addon ember-mailcheck
 ```
 
+## Usage
+
+In order to create an email input, you can call the `mail-check` component like so:
+
+```hbs
+{{mail-check inputClass='form-input'}}
+```
+
+Upon blur, the email will be validated with mailcheck. If there is no email domain the
+user will see the following hint: `You seem to be missing an email domain, like @gmail.com or @hotmail.com`.
+
+If there's a typo in the email field, like `johnotander@gmal.com`, a hint will appear that
+says `Did you mean johnotander@gmail.com?`. As an added convenience, the email is clickable,
+and will automatically populate the input when clicked.
+
+An example with all the options:
+
+```hbs
+{{mail-check name='email' type='email' placeholder='Enter your email' inputClass='form-input'}}
+```
+
 ## Development
 
 ### Installation

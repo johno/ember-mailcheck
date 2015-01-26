@@ -31,6 +31,6 @@ test('is shows a generic suggestion when there is not an email', function() {
 
   equal(
     $component.find('.mailcheck-hint').text().trim(),
-    'You seem to be missing an email domain, like @google.com or @hotmail.com'
+    'You seem to be missing an email domain, like @gmail.com or @hotmail.com'
   );
 });
