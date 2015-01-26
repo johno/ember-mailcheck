@@ -19,18 +19,3 @@ test('it renders', function() {
   this.append();
   equal(component._state, 'inDOM');
 });
-
-test('is shows a generic suggestion when there is not an email', function() {
-  var component = this.subject();
-  component.set('value', 'foo');
-  var $component = this.append();
-
-  Ember.run(function() {
-    $component.focus().blur();
-  });
-
-  equal(
-    $component.find('.mailcheck-hint').text().trim(),
-    'You seem to be missing an email domain, like @gmail.com or @hotmail.com'
-  );
-});
