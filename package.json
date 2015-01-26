@@ -1,6 +1,6 @@
 {
   "name": "ember-mailcheck",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Suggest a domain when your users misspell it in an email address.",
   "directories": {
     "doc": "doc",
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "John Otander <johnotander@gmail.com> (http://johnotander.com/)",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
