@@ -1,1 +1,11 @@
 {{input type=type name=name value=value placeholder=placeholder class=inputClass focus-out='mailcheck'}}
+
+{{#if hint}}
+  <span class="mailcheck-hint">
+    {{#if suggestion}}
+      {{hint}} <a {{action 'useSuggestion'}} href="#!">{{suggestion}}</a>?
+    {{else}}
+      {{hint}}
+    {{/if}}
+  </span>
+{{/if}}
