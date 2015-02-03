@@ -21,7 +21,7 @@ test('filling out the mail-check component without an email domain', function() 
 
   andThen(function() {
     equal(
-      Ember.$('.mailcheck-hint').text().trim(),
+      Ember.$('.mailcheck-hint').first().text().trim(),
       'You seem to be missing an email domain, like @gmail.com or @hotmail.com'
     );
   });
