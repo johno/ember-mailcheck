@@ -25,8 +25,8 @@ export default Ember.Component.extend({
           var email = _this.value;
 
           if (isEmail(email)) {
-            _this.set('hint', null);
             _this.set('suggestion', null);
+            _this.set('hint', null);
             return;
           }
 
@@ -40,6 +40,8 @@ export default Ember.Component.extend({
 
     useSuggestion: function() {
       this.set('value', this.get('suggestion'));
+      this.set('suggestion', null);
+      this.set('hint', null);
     }
   }
 });
