@@ -7,6 +7,8 @@ export default Ember.Component.extend({
   value: '',
   placeholder: '',
   suggestion: '',
+  hintMessage: 'You seem to be missing an email domain, like @gmail.com or @hotmail.com',
+  suggestionMessage: 'Did you mean',
   inputClass: 'mailcheck-input',
   classNames: ['mailcheck'],
 
@@ -17,8 +19,7 @@ export default Ember.Component.extend({
       Mailcheck.run({
         email: _this.value,
         suggested: function(suggestion) {
-          var message = 'Did you mean ';
-          _this.set('hint', message);
+          _this.set('hint', _this.get('suggestionMessage') + ' ');
           _this.set('suggestion', suggestion.full);
         },
         empty: function() {
@@ -30,9 +31,7 @@ export default Ember.Component.extend({
             return;
           }
 
-          var message = 'You seem to be missing an email domain, like @gmail.com or @hotmail.com';
-
-          _this.set('hint', message);
+          _this.set('hint', _this.get('hintMessage'));
           _this.set('suggestion', null);
         }
       });

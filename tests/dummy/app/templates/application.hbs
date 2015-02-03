@@ -1,7 +1,24 @@
-<h2 id="title">Ember Mailcheck</h2>
+<h1>Ember Mailcheck</h1>
 
-<a href="https://github.com/johnotander/ember-mailcheck">https://github.com/johnotander/ember-mailcheck</a> <br><br>
+<a href="https://github.com/johnotander/ember-mailcheck">Github</a> <br><br>
 
-{{mail-check inputClass='form-input'}} <br>
+{{mail-check inputClass='form-input' placeholder='Email'}} <br>
+
+<pre>
+\{{mail-check inputClass='form-input' placeholder='Email'}}
+</pre>
+
+<h3>A more customized example</h3>
+{{mail-check
+  inputClass='input'
+  placeholder='Please enter an email address'
+  hintMessage='That does not look like a valid email address'
+  suggestionMessage='Did you mean to type'}}
+<pre>
+\{{mail-check
+  inputClass='input'
+  hintMessage='That does not look like a valid email address'
+  suggestionMessage='Did you mean to type'}}
+</pre>
 
 {{outlet}}
