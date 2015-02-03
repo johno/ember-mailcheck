@@ -25,6 +25,8 @@ export default Ember.Component.extend({
           var email = _this.value;
 
           if (isEmail(email)) {
+            _this.set('hint', null);
+            _this.set('suggestion', null);
             return;
           }
 
