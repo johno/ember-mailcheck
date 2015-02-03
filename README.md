@@ -31,7 +31,13 @@ and will automatically populate the input when clicked.
 An example with all the options:
 
 ```hbs
-{{mail-check name='email' type='email' placeholder='Enter your email' inputClass='form-input'}}
+{{mail-check
+  name='email'
+  type='email'
+  inputClass='form-input'
+  placeholder='Enter your email'
+  hintMessage='That does not look like a valid email address'
+  suggestionMessage='Did you mean to type'}}
 ```
 
 ## Development
