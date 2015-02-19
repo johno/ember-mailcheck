@@ -1,6 +1,4 @@
-# Ember Mailcheck
-
-[![Build Status](https://travis-ci.org/johnotander/ember-mailcheck.svg?branch=master)](https://travis-ci.org/johnotander/ember-mailcheck)
+# Ember Mailcheck [![Build Status](https://travis-ci.org/johnotander/ember-mailcheck.svg?branch=master)](https://travis-ci.org/johnotander/ember-mailcheck)
 
 An Ember component for the [mailcheck](https://github.com/mailcheck/mailcheck) library to
 improve the UX of your app by suggesting a domain when your users misspell it in an email address.
@@ -28,7 +26,13 @@ If there's a typo in the email field, like `johnotander@gmal.com`, a hint will a
 says `Did you mean johnotander@gmail.com?`. As an added convenience, the email is clickable,
 and will automatically populate the input when clicked.
 
-An example with all the options:
+#### An example with a set value:
+
+```hbs
+{{mail-check value=user.email}}
+```
+
+#### An example with all the options:
 
 ```hbs
 {{mail-check
