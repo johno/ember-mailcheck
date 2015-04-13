@@ -1,11 +1,17 @@
-# Ember Mailcheck [![Build Status](https://travis-ci.org/johnotander/ember-mailcheck.svg?branch=master)](https://travis-ci.org/johnotander/ember-mailcheck)
+# ember-mailcheck [![Build Status](https://travis-ci.org/johnotander/ember-mailcheck.svg?branch=master)](https://travis-ci.org/johnotander/ember-mailcheck) [![Ember Observer Score](http://emberobserver.com/badges/ember-mailcheck.svg)](http://emberobserver.com/addons/ember-mailcheck)
 
 An Ember component for the [mailcheck](https://github.com/mailcheck/mailcheck) library to
 improve the UX of your app by suggesting a domain when your users misspell it in an email address.
 
-Integrates with [ember-cli](http://ember-cli.com).
-
 ## Installation
+
+For Ember CLI >= `0.2.3`
+
+```
+ember install ember-mailcheck
+```
+
+For Ember CLI < `0.2.3`
 
 ```
 ember install:addon ember-mailcheck
