@@ -1,6 +1,6 @@
 {
   "name": "ember-mailcheck",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Suggest a domain when your users misspell it in an email address.",
   "directories": {
     "doc": "doc",
