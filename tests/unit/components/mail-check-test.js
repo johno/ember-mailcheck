@@ -20,16 +20,26 @@ test('it renders', function(assert) {
   assert.equal(component._state, 'inDOM');
 });
 
-test('it adds the correct class', function(assert) {
+test('it adds the component with the correct attributes', function(assert) {
   var component = this.subject();
   this.append();
 
   assert.ok(component.$().hasClass('mailcheck'));
+  assert.ok(component.$().find('input').length);
+  assert.ok(component.$().find('input').hasClass('mailcheck-input'));
+  assert.ok(!component.$().find('.mailcheck-hint').length);
 });
 
-test('it contains the email input', function(assert) {
+test('it adds a hint when there is no email', function(assert) {
   var component = this.subject();
   this.append();
 
-  assert.ok(component.$().find('input').length);
+  Ember.run(function() {
+    component.$().find('input').val('').blur();
+  });
+
+  assert.equal(
+    component.$().find('.mailcheck-hint').text().trim(),
+    'You seem to be missing an email domain, like @gmail.com or @hotmail.com'
+  );
 });
