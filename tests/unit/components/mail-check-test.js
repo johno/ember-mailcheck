@@ -10,12 +10,26 @@ moduleForComponent('mail-check', 'MailCheckComponent', {
   // needs: ['component:foo', 'helper:bar']
 });
 
-test('it renders', function() {
+test('it renders', function(assert) {
   // creates the component instance
   var component = this.subject();
-  equal(component._state, 'preRender');
+  assert.equal(component._state, 'preRender');
 
   // appends the component to the page
   this.append();
-  equal(component._state, 'inDOM');
+  assert.equal(component._state, 'inDOM');
+});
+
+test('it adds the correct class', function(assert) {
+  var component = this.subject();
+  this.append();
+
+  assert.ok(component.$().hasClass('mailcheck'));
+});
+
+test('it contains the email input', function(assert) {
+  var component = this.subject();
+  this.append();
+
+  assert.ok(component.$().find('input').length);
 });
