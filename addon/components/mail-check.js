@@ -11,6 +11,7 @@ export default Ember.Component.extend({
   suggestionMessage: 'Did you mean',
   inputClass: 'mailcheck-input',
   classNames: ['mailcheck'],
+  disabled : false,
 
   actions: {
     mailcheck: function() {
