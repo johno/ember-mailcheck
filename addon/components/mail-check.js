@@ -12,6 +12,8 @@ export default Ember.Component.extend({
   inputClass: 'mailcheck-input',
   classNames: ['mailcheck'],
   disabled : false,
+  required: false,
+  title: null,
 
   actions: {
     mailcheck: function() {

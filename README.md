@@ -47,7 +47,10 @@ and will automatically populate the input when clicked.
   inputClass='form-input'
   placeholder='Enter your email'
   hintMessage='That does not look like a valid email address'
-  suggestionMessage='Did you mean to type'}}
+  suggestionMessage='Did you mean to type'
+  disabled=false
+  required=true
+  title='Provide an email'}}
 ```
 
 ## Development
