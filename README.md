@@ -5,16 +5,8 @@ improve the UX of your app by suggesting a domain when your users misspell it in
 
 ## Installation
 
-For Ember CLI >= `0.2.3`
-
-```
+```sh
 ember install ember-mailcheck
-```
-
-For Ember CLI < `0.2.3`
-
-```
-ember install:addon ember-mailcheck
 ```
 
 ## Usage
